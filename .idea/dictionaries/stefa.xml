@@ -1,6 +1,8 @@
 <component name="ProjectDictionaryState">
   <dictionary name="stefa">
     <words>
+      <w>bcrypt</w>
+      <w>gravatar</w>
       <w>mongo</w>
     </words>
   </dictionary>
