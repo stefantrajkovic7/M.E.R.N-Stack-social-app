@@ -1,0 +1,23 @@
+{
+  "name": "mern-stack-social",
+  "version": "1.0.0",
+  "description": "MERN STACK",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "react/redux, node, mern"
+  ],
+  "author": "Stefan Trajkovic",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.0.15",
+    "passport-jwt": "^4.0.0",
+    "validator": "^9.4.1"
+  }
+}
