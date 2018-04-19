@@ -9,7 +9,7 @@ const bcrypt = require('bcryptjs');
  *
  * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
  *
- * @apiSuccess (201) {String} Created New User
+ * @apiSuccess (200) {String} Created New User
  *
  * @apiError (400) {String} message Validation error
  *
@@ -47,5 +47,39 @@ exports.create = (req, res) => {
                     });
                 });
             }
+        });
+};
+
+/**
+ * @api {post} /users/login Login user
+ *
+ * @apiName Login User
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (201) {String} User logged in with jwt
+ *
+ * @apiError (400) {String} message Validation error
+ *
+ * @apiError (404) {String} User Not Found
+ */
+exports.login = (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    User.findOne({email})
+        .then(user => {
+            if (!user) {
+                return res.status(404).json({ email: 'User not found' });
+            }
+
+            bcrypt.compare(password, user.password)
+                .then(isMatch => {
+                    if (isMatch) {
+                        res.json({ msg: 'Success' });
+                    } else {
+                        return res.status(400).json({ password: 'Password incorrect' });
+                    }
+                });
         });
 };
