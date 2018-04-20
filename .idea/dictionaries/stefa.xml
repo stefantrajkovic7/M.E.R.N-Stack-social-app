@@ -2,7 +2,11 @@
   <dictionary name="stefa">
     <words>
       <w>bcrypt</w>
+      <w>fieldofstudy</w>
+      <w>githubusername</w>
       <w>gravatar</w>
+      <w>instagram</w>
+      <w>linkedin</w>
       <w>mongo</w>
     </words>
   </dictionary>
