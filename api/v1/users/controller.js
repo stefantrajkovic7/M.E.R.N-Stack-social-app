@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const keys = require('../../../config/keys');
 const passport = require('passport');
+const helper = require('../../../helpers');
 
 /**
  * @api {post} /users/create Create user
@@ -19,6 +20,12 @@ const passport = require('passport');
  * @apiError (500) {String} Internal Server error
  */
 exports.create = (req, res) => {
+    const { errors, isValid } = helper.validateRegistration(req.body);
+
+    if (!isValid) {
+        return res.status(400).json(errors)
+    }
+
     User.findOne({ email: req.body.email })
         .then(user => {
             if (user) {
