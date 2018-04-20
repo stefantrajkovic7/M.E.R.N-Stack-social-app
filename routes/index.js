@@ -1,8 +1,8 @@
 module.exports = app => {
-    app.get('/', (req, res) => res.send('Hello'));
+    app.get('/', (req, res) => res.send('Hello World!'));
 
     /**
-     * @UserRoutes
+     * @UserApiRoutes
      */
     app.use('/api/v1/users', require('../api/v1/users'));
 

@@ -1,6 +1,8 @@
 const User = require('../../../models/User');
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const keys = require('../../../config/keys');
 
 /**
  * @api {post} /users/create Create user
@@ -39,7 +41,7 @@ exports.create = (req, res) => {
                         newUser.password = hash;
                         newUser
                             .save()
-                            .then(user => res.status(201).json(user))
+                            .then(user => res.status(200).json(user))
                             .catch(err => {
                                 console.log(err);
                                 res.status(500).json({ message: 'Internal server error' });
@@ -57,7 +59,7 @@ exports.create = (req, res) => {
  *
  * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
  *
- * @apiSuccess (201) {String} User logged in with jwt
+ * @apiSuccess success: true {String} User logged in with jwt
  *
  * @apiError (400) {String} message Validation error
  *
@@ -76,9 +78,19 @@ exports.login = (req, res) => {
             bcrypt.compare(password, user.password)
                 .then(isMatch => {
                     if (isMatch) {
-                        res.json({ msg: 'Success' });
+                        const payload = {
+                            id: user.id,
+                            name: user.name,
+                            avatar: user.avatar
+                        };
+                        jwt.sign(payload, keys.secret, { expiresIn: 3600 }, (err, token) => {
+                            res.json({
+                                success: true,
+                                token: 'Bearer ' + token
+                            })
+                        });
                     } else {
-                        return res.status(400).json({ password: 'Password incorrect' });
+                        return res.status(400).json({ password: 'Validation Error: Password incorrect' });
                     }
                 });
         });
