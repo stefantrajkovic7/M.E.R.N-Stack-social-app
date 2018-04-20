@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const db = require('./config/keys').mongoURI;
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const passport = require('passport');
 
 const app = express();
 
@@ -10,6 +11,10 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// Middlewares/Services
+app.use(passport.initialize());
+require('./services/passport')(passport);
 
 // API Routes
 require('./routes')(app);

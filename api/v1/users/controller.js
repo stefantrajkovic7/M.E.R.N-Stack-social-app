@@ -3,6 +3,7 @@ const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const keys = require('../../../config/keys');
+const passport = require('passport');
 
 /**
  * @api {post} /users/create Create user
@@ -94,4 +95,19 @@ exports.login = (req, res) => {
                     }
                 });
         });
+};
+
+/**
+ * @api {get} /users/current returns User if is success
+ *
+ * @apiName Current User Info
+ *
+ * @apiSuccess success: true {String} User check confirmed, returns current user
+ *
+ * @apiError (400) {String} message Validation error
+ *
+ * @apiError (404) {String} User Not Found
+ */
+exports.current = (req, res) => {
+
 };
