@@ -109,5 +109,9 @@ exports.login = (req, res) => {
  * @apiError (404) {String} User Not Found
  */
 exports.current = (req, res) => {
-
+    res.json({
+        id: req.user.id,
+        name: req.user.name,
+        email: req.user.email
+    });
 };
