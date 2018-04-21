@@ -144,6 +144,47 @@ exports.addExperience = (req, res) => {
 };
 
 /**
+ * @api {post} /profile/addEducation
+ *
+ * @apiName POST Creates Profile Education
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Creates a Profile Education
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.addEducation = (req, res) => {
+    const { errors, isValid } = helper.validateProfileEdu(req.body);
+
+    if (!isValid) {
+        return res.status(400).json(errors)
+    }
+
+    Profile.findOne({ user: req.user.id })
+        .then(profile => {
+            const newEdu = {
+                school: req.body.school,
+                degree: req.body.degree,
+                fieldofstudy: req.body.fieldofstudy,
+                from: req.body.from,
+                to: req.body.to,
+                current: req.body.current,
+                description: req.body.description
+            };
+
+            profile.education.unshift(newEdu);
+            profile
+                .save()
+                .then(profile => res.json(profile));
+        });
+
+};
+
+/**
  * @api {get} /profile/list
  *
  * @apiName GET List of profiles

@@ -9,6 +9,7 @@ router.get('/list', controller.list);
 router.get('/handle/:handle', controller.findHandle);
 router.get('/user/:user_id', controller.findUser);
 router.post('/create', middleware.authenticate, controller.create);
-router.post('/addexp', middleware.authenticate, controller.addExperience);
+router.post('/add_experience', middleware.authenticate, controller.addExperience);
+router.post('/add_education', middleware.authenticate, controller.addEducation);
 
 module.exports = router;
