@@ -100,5 +100,58 @@ exports.create = (req, res) => {
         }
     });
 
+};
 
+/**
+ * @api {get} /profile/handle/:handle
+ *
+ * @apiName GET Profile Handle
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Fetching Profile Handle
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.findHandle = (req, res) => {
+    Profile.findOne({ handle: req.params.handle })
+        .populate('user', ['name', 'avatar'])
+        .then(profile => {
+            if (!profile) {
+                return res.status(404).json('Not Found')
+            }
+
+            res.json(profile);
+        })
+        .catch(err => res.status(500).json(err));
+};
+
+/**
+ * @api {get} /profile/user/:user_id
+ *
+ * @apiName GET Profile User
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Fetching Profile User
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.findUser = (req, res) => {
+    Profile.findOne({ user: req.params.user_id })
+        .populate('user', ['name', 'avatar'])
+        .then(profile => {
+            if (!profile) {
+                return res.status(404).json('Not Found')
+            }
+
+            res.json(profile);
+        })
+        .catch(err => res.status(500).json(err));
 };
