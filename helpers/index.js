@@ -62,12 +62,7 @@ exports.validateProfile = data => {
     let errors = {};
 
     siteUrls = [
-        "website",
-        "youtube",
-        "twitter",
-        "facebook",
-        "linkedin",
-        "instagram"
+        "website"
     ];
     dataFields = ["handle", "status", "skills"];
     dataFields.forEach(field => {
@@ -83,6 +78,7 @@ exports.validateProfile = data => {
 
     if (!isEmpty(data.website)) {
         siteUrls.forEach(url => {
+            data[url] = !isEmpty(data[url]) ? data[url] : "";
             if (!Validator.isURL(data[url])) {
                 errors[url] = "Not a valid URL";
             }
