@@ -103,9 +103,40 @@ exports.create = (req, res) => {
 };
 
 /**
+ * @api {get} /profile/list
+ *
+ * @apiName GET List of profiles
+ *
+ * @access Public
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Fetching Profiles List
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.list = (req, res) => {
+    Profile.find()
+        .populate('user', ['name', 'avatar'])
+        .then(profiles => {
+            if (!profiles) {
+                return res.status(404).json('There are no profiles')
+            }
+
+            res.json(profiles);
+        })
+        .catch(err => res.status(500).json(err));
+};
+
+/**
  * @api {get} /profile/handle/:handle
  *
  * @apiName GET Profile Handle
+ *
+ * @access Public
  *
  * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
  *
@@ -133,6 +164,8 @@ exports.findHandle = (req, res) => {
  * @api {get} /profile/user/:user_id
  *
  * @apiName GET Profile User
+ *
+ * @access Public
  *
  * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
  *
