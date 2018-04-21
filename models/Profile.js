@@ -61,7 +61,7 @@ const ProfileSchema = new Schema({
             },
             description: {
                 type: String
-            },
+            }
         }
     ],
     education: [
@@ -91,20 +91,20 @@ const ProfileSchema = new Schema({
             },
             description: {
                 type: String
-            },
+            }
         }
     ],
     social: {
         youtube: {
             type: String
         },
+        twitter: {
+            type: String
+        },
         facebook: {
             type: String
         },
         linkedin: {
-            type: String
-        },
-        twitter: {
             type: String
         },
         instagram: {
@@ -114,7 +114,7 @@ const ProfileSchema = new Schema({
     date: {
         type: Date,
         default: Date.now
-    },
+    }
 });
 
 module.exports = Profile = mongoose.model('profile', ProfileSchema);
