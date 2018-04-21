@@ -187,11 +187,11 @@ exports.addEducation = (req, res) => {
 /**
  * @api {delete} /profile/experience/:id
  *
- * @apiName DELETE Removes Profile Education by id
+ * @apiName DELETE Removes Profile Experience by id
  *
  * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
  *
- * @apiSuccess (200) {String} Removes Education
+ * @apiSuccess (200) {String} Removes Experience
  *
  * @apiError (400) {String} message Validation Error
  *
@@ -207,12 +207,51 @@ exports.removeExperience = (req, res) => {
 
             if (removeIndex === -1) {
                 return res.status(404).json({
-                    error: 'There is no education with this ID',
+                    error: 'There is no history with this ID',
                 });
             }
 
             // as we already returned above with an error, we can use splice now
             profile.experience.splice(removeIndex, 1);
+
+            // Update new state
+            profile
+                .save()
+                .then(profile => res.json(profile))
+                .catch(err => res.status(500).json(err));
+        });
+
+};
+
+/**
+ * @api {delete} /profile/education/:id
+ *
+ * @apiName DELETE Removes Profile Education by id
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Removes Education
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.removeEducation = (req, res) => {
+    Profile.findOne({ user: req.user.id })
+        .then(profile => {
+            const removeIndex = profile.education
+                .map(item => item.id)
+                .indexOf(req.params.id);
+
+            if (removeIndex === -1) {
+                return res.status(404).json({
+                    error: 'There is no education with this ID',
+                });
+            }
+
+            // as we already returned above with an error, we can use splice now
+            profile.education.splice(removeIndex, 1);
 
             // Update new state
             profile
