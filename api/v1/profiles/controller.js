@@ -263,6 +263,28 @@ exports.removeEducation = (req, res) => {
 };
 
 /**
+ * @api {delete} /profile
+ *
+ * @apiName DELETE Removes Profile
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Removes profile and User
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.remove = (req, res) => {
+    Profile.findOneAndRemove({ user: req.user.id })
+        .then(() => {
+            User.findOneAndRemove({ _id: req.user.id })
+                .then(() => res.json({ success: true }))
+        });
+};
+
+/**
  * @api {get} /profile/list
  *
  * @apiName GET List of profiles
