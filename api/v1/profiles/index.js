@@ -11,5 +11,6 @@ router.get('/user/:user_id', controller.findUser);
 router.post('/create', middleware.authenticate, controller.create);
 router.post('/add_experience', middleware.authenticate, controller.addExperience);
 router.post('/add_education', middleware.authenticate, controller.addEducation);
+router.delete('/experience/:id', middleware.authenticate, controller.removeExperience);
 
 module.exports = router;
