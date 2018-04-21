@@ -103,6 +103,47 @@ exports.create = (req, res) => {
 };
 
 /**
+ * @api {post} /profile/addHistory
+ *
+ * @apiName POST Creates Profile History
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Creates a Profile History
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.addExperience = (req, res) => {
+    const { errors, isValid } = helper.validateProfileExp(req.body);
+
+    if (!isValid) {
+        return res.status(400).json(errors)
+    }
+
+    Profile.findOne({ user: req.user.id })
+        .then(profile => {
+            const newExp = {
+                title: req.body.title,
+                company: req.body.company,
+                location: req.body.location,
+                from: req.body.from,
+                to: req.body.to,
+                current: req.body.current,
+                description: req.body.description
+            };
+
+            profile.experience.unshift(newExp);
+            profile
+                .save()
+                .then(profile => res.json(profile));
+        });
+
+};
+
+/**
  * @api {get} /profile/list
  *
  * @apiName GET List of profiles

@@ -58,6 +58,25 @@ exports.validateLogin = data => {
 
 };
 
+exports.validateProfileExp = data => {
+    let errors = {};
+
+    dataFields = ["title", "company", "from"];
+
+    dataFields.forEach(field => {
+        data[field] = !isEmpty(data[field]) ? data[field] : "";
+        if (Validator.isEmpty(data[field])) {
+            errors[field] = `${field} field is required`;
+        }
+    });
+
+    return {
+        errors,
+        isValid: isEmpty(errors)
+    }
+
+};
+
 exports.validateProfile = data => {
     let errors = {};
 
