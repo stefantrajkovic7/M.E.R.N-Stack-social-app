@@ -18,6 +18,7 @@ const helper = require('../../../helpers');
 
 exports.find = (req, res) => {
     Profile.findOne({ user: req.user.id })
+        .populate('user', ['name', 'avatar'])
         .then(profile => {
             if (!profile) {
                 return res.status(404).json('Not Found')
