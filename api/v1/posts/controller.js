@@ -147,3 +147,41 @@ exports.like = (req, res) => {
                 .catch(err => res.status(500).json(err));
         });
 };
+
+/**
+ * @api {post} /posts/unlike/:id
+ *
+ * @apiName POST UNLikes Post
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} UNLikes Post
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.unlike = (req, res) => {
+    Profile.findOne({ user: req.user.id })
+        .then(() => {
+            Post.findById(req.params.id)
+                .then(post => {
+                    if (post.likes.filter(like => like.user.toString() === req.user.id).length === 0) {
+                        return res.status(400).json({ error: 'Validation Error: You have not liked this post yet' });
+                    }
+
+                    // Get remove index
+                    const removeIndex = post.likes
+                        .map(item => item.user.toString())
+                        .indexOf(req.user.id);
+
+                    // Splice it
+                    post.likes.splice(removeIndex, 1);
+                    post
+                        .save()
+                        .then(unlikePost => res.json(unlikePost));
+                })
+                .catch(err => res.status(500).json(err));
+        });
+};
