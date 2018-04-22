@@ -1,4 +1,5 @@
 const User = require('../../../models/User');
+const Profile = require('../../../models/Profile');
 const Post = require('../../../models/Post');
 const helper = require('../../../helpers');
 
@@ -112,5 +113,37 @@ exports.remove = (req, res) => {
                         .then(() => res.json({ success: true }))
                         .catch(err => res.status(500).json(err));
                 })
+        });
+};
+
+/**
+ * @api {post} /posts/like/:id
+ *
+ * @apiName POST Likes Post
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Likes Post
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.like = (req, res) => {
+    Profile.findOne({ user: req.user.id })
+        .then(() => {
+            Post.findById(req.params.id)
+                .then(post => {
+                    if (post.likes.filter(like => like.user.toString() === req.user.id).length > 0) {
+                        return res.status(400).json({ error: 'Validation Error: User already liked this post' });
+                    }
+
+                    post.likes.unshift({ user: req.user.id });
+                    post
+                        .save()
+                        .then(post => res.json(post));
+                })
+                .catch(err => res.status(500).json(err));
         });
 };
