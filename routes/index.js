@@ -11,4 +11,9 @@ module.exports = app => {
      */
     app.use('/api/v1/profiles', require('../api/v1/profiles'));
 
+    /**
+     * @PostApiRoutes
+     */
+    app.use('/api/v1/posts', require('../api/v1/posts'));
+
 };
