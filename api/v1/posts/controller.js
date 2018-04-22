@@ -35,3 +35,50 @@ exports.create = (req, res) => {
         .then(post => res.json(post))
         .catch(err => res.status(500).json(err));
 };
+
+/**
+ * @api {get} /posts
+ *
+ * @apiName GET Fetch All Posts
+ *
+ * @access Public
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Fetching a Posts
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.list = (req, res) => {
+   Post
+       .find()
+       .sort({ date: -1 })
+       .then(posts => res.json(posts))
+       .catch(err => res.status(500).json(err));
+};
+
+/**
+ * @api {get} /posts/find
+ *
+ * @apiName GET Fetch Single Post
+ *
+ * @access Public
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Fetching a Single Post
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.find = (req, res) => {
+    Post
+        .findById(req.params.id)
+        .then(post => res.json(post))
+        .catch(err => res.status(500).json(err));
+};
