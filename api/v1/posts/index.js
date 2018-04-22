@@ -7,5 +7,6 @@ const controller = require('./controller');
 router.get('/', controller.list);
 router.get('/:id', controller.find);
 router.post('/create', middleware.authenticate, controller.create);
+router.delete('/:id', middleware.authenticate, controller.remove);
 
 module.exports = router;

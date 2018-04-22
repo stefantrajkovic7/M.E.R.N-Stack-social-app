@@ -82,3 +82,35 @@ exports.find = (req, res) => {
         .then(post => res.json(post))
         .catch(err => res.status(500).json(err));
 };
+
+/**
+ * @api {delete} /posts/:id
+ *
+ * @apiName DELETE Removes Post
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Removes Post
+ *
+ * @apiError (401) {String} message Not Authorized
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.remove = (req, res) => {
+    Post.findOne({ user: req.user.id })
+        .then(() => {
+            Post.findById(req.params.id)
+                .then(post => {
+                    // Check for post owner
+                    if (post.user.toString() !== req.user.id) {
+                        return res.status(401).json({ auth: 'Not Authorized' });
+                    }
+                    // Removes a post
+                    post
+                        .remove()
+                        .then(() => res.json({ success: true }))
+                        .catch(err => res.status(500).json(err));
+                })
+        });
+};
