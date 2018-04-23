@@ -34,7 +34,10 @@ exports.create = (req, res) => {
     newPost
         .save()
         .then(post => res.json(post))
-        .catch(err => res.status(500).json(err));
+        .catch(err => {
+            console.log(err);
+            res.sendStatus(500);
+        });
 };
 
 /**
@@ -58,7 +61,10 @@ exports.list = (req, res) => {
        .find()
        .sort({ date: -1 })
        .then(posts => res.json(posts))
-       .catch(err => res.status(500).json(err));
+       .catch(err => {
+           console.log(err);
+           res.sendStatus(500);
+       });
 };
 
 /**
@@ -81,7 +87,10 @@ exports.find = (req, res) => {
     Post
         .findById(req.params.id)
         .then(post => res.json(post))
-        .catch(err => res.status(500).json(err));
+        .catch(err => {
+            console.log(err);
+            res.sendStatus(500);
+        });
 };
 
 /**
@@ -111,7 +120,10 @@ exports.remove = (req, res) => {
                     post
                         .remove()
                         .then(() => res.json({ success: true }))
-                        .catch(err => res.status(500).json(err));
+                        .catch(err => {
+                            console.log(err);
+                            res.sendStatus(500);
+                        });
                 })
         });
 };
@@ -144,7 +156,10 @@ exports.like = (req, res) => {
                         .save()
                         .then(post => res.json(post));
                 })
-                .catch(err => res.status(500).json(err));
+                .catch(err => {
+                    console.log(err);
+                    res.sendStatus(500);
+                });
         });
 };
 
@@ -182,6 +197,52 @@ exports.unlike = (req, res) => {
                         .save()
                         .then(unlikePost => res.json(unlikePost));
                 })
-                .catch(err => res.status(500).json(err));
+                .catch(err => {
+                    console.log(err);
+                    res.sendStatus(500);
+                });
         });
+};
+
+/**
+ * @api {post} /posts/unlike/:id
+ *
+ * @apiName POST UNLikes Post
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} UNLikes Post
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.addComment = (req, res) => {
+    const { errors, isValid } = helper.validatePost(req.body);
+
+    if (!isValid) {
+        return res.status(400).json(errors);
+    }
+
+    Post.findById(req.params.id)
+        .then(post => {
+            const newComment = {
+                text: req.body.text,
+                name: req.body.name,
+                avatar: req.body.avatar,
+                user: req.user.id
+            };
+
+            post.comments.unshift(newComment);
+
+            post
+                .save()
+                .then(post => res.json(post));
+        })
+        .catch(err => {
+            console.log(err);
+            res.sendStatus(500);
+        });
+
 };
