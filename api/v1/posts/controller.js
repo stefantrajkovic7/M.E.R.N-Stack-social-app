@@ -205,13 +205,13 @@ exports.unlike = (req, res) => {
 };
 
 /**
- * @api {post} /posts/unlike/:id
+ * @api {post} /posts/comment/:id
  *
- * @apiName POST UNLikes Post
+ * @apiName POST Create Comment
  *
  * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
  *
- * @apiSuccess (200) {String} UNLikes Post
+ * @apiSuccess (200) {String} Creates a Post comment
  *
  * @apiError (400) {String} message Validation Error
  *
@@ -239,6 +239,44 @@ exports.addComment = (req, res) => {
             post
                 .save()
                 .then(post => res.json(post));
+        })
+        .catch(err => {
+            console.log(err);
+            res.sendStatus(500);
+        });
+
+};
+
+/**
+ * @api {delete} /posts/comment/:id
+ *
+ * @apiName DELETE Remove Comment
+ *
+ * @apiHeader (RequestFileHeader) {String="application/json"} Content-Type
+ *
+ * @apiSuccess (200) {String} Removes Post comment
+ *
+ * @apiError (400) {String} message Validation Error
+ *
+ * @apiError (500) {String} Internal Server error
+ */
+
+exports.removeComment = (req, res) => {
+    Post.findById(req.params.id)
+        .then(post => {
+            if (post.comments.filter(comment => comment._id.toString() === req.params.comment_id).length === 0) {
+                return res.status(404).json({ error: 'Comment does not exist' });
+            }
+
+            const removeIndex = post.comments
+                .map(item => item._id.toString())
+                .indexOf(req.params.comment_id);
+
+            post.comments.splice(removeIndex, 1);
+
+            post
+                .save()
+                .then(comment => res.json(comment))
         })
         .catch(err => {
             console.log(err);
