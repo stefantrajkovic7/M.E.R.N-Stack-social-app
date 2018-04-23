@@ -4,7 +4,9 @@
   "description": "MERN STACK",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \" npm run server\" \"npm run client\""
   },
   "keywords": [
     "react/redux, node, mern"
@@ -14,6 +16,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
     "express": "^4.16.3",
     "gravatar": "^1.6.0",
     "jsonwebtoken": "^8.2.1",
