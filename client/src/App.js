@@ -12,7 +12,7 @@ import Login from "./components/auth/login";
 class App extends Component {
   render() {
     return (
-        <Provider>
+        <Provider store={store}>
             <Router>
                 <div className="App">
                     <Navigation />
