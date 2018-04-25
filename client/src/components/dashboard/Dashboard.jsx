@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '../shared/Spinner';
+import {Link} from "react-router-dom";
 
 export class Dashboard extends Component {
     componentDidMount() {
@@ -8,7 +9,7 @@ export class Dashboard extends Component {
     }
 
     render() {
-        // const { user } = this.props.auth;
+        const { user } = this.props.auth;
         const { profile, loading } = this.props.profile;
 
         let dashboardUI;
@@ -16,7 +17,19 @@ export class Dashboard extends Component {
         if (profile === null || loading) {
             dashboardUI = <Spinner />
         } else {
-            dashboardUI = <h1>DATA</h1>
+            if (Object.keys(profile).length > 0) {
+                dashboardUI = <h4>DISPLAY PROFILE</h4>
+            } else {
+                dashboardUI = (
+                    <div>
+                        <p className="lead text-muted">Welcome { user.name }</p>
+                        <p>You Have not yet setup a profile</p>
+                        <Link to="/create-profile" className="btn btn-lg btn-info">
+                            Create Profile
+                        </Link>
+                    </div>
+                )
+            }
         }
 
         return (
