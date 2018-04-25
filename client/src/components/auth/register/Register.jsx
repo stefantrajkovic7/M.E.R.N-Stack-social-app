@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import {api} from "../../../environment/dev";
-
 export class Register extends Component {
+
     constructor() {
         super();
         this.state = {
@@ -13,6 +12,18 @@ export class Register extends Component {
             password: '',
             password2: '',
             errors: {}
+        }
+    }
+
+    componentDidMount() {
+        if (this.props.auth.isAuthenticated) {
+            this.props.history.push('/dashboard');
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({ errors: nextProps.errors })
         }
     }
 
@@ -29,10 +40,8 @@ export class Register extends Component {
             password2: this.state.password2,
         };
 
-        axios
-            .post(`${api}/users/register`, newUser)
-            .then(res => console.log(res.data))
-            .catch(err => this.setState({ errors: err.response.data }));
+        this.props.registerUser(newUser, this.props.history);
+
     };
 
     render() {
@@ -44,7 +53,7 @@ export class Register extends Component {
                         <div className="col-md-8 m-auto">
                             <h1 className="display-4 text-center">Sign Up</h1>
                             <p className="lead text-center">Create your DevConnector account</p>
-                            <form onSubmit={this.onSubmit}>
+                            <form noValidate onSubmit={this.onSubmit}>
                                 <div className="form-group">
                                     <input
                                         type="text"
@@ -107,3 +116,9 @@ export class Register extends Component {
         )
     }
 }
+
+Register.propTypes = {
+    registerUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+};
