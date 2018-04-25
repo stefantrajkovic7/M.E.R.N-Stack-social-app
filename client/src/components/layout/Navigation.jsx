@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {logoutUser, clearCurrentProfile} from "../../store/selectors";
 
 class Navigation extends Component {
     onLogoutClick(e) {
+        const {history} = this.props;
         e.preventDefault();
         this.props.clearCurrentProfile();
         this.props.logoutUser();
+        history.push('/login');
     }
 
     render() {
@@ -91,4 +94,4 @@ const mapStateToProps = state => ({
     auth: state.auth
 });
 
-export default connect(mapStateToProps, { logoutUser, clearCurrentProfile })(Navigation);
+export default connect(mapStateToProps, { logoutUser, clearCurrentProfile })(withRouter(Navigation));
