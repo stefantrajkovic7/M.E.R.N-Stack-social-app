@@ -8,9 +8,16 @@ const initialState = {
 
 export default function(state = initialState, action) {
     switch (action.type) {
-        case actions.SET_CURRENT_USER:
+        case actions.PROFILE_LOADING:
             return {
-
+                ...state,
+                loading: true
+            };
+        case actions.GET_PROFILE:
+            return {
+                ...state,
+                profile: action.payload,
+                loading: false
             };
         default:
             return state;
