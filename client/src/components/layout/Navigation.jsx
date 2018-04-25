@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {logoutUser} from "../../store/selectors";
+import {logoutUser, clearCurrentProfile} from "../../store/selectors";
 
 class Navigation extends Component {
     onLogoutClick(e) {
         e.preventDefault();
+        this.props.clearCurrentProfile();
         this.props.logoutUser();
     }
 
@@ -90,4 +91,4 @@ const mapStateToProps = state => ({
     auth: state.auth
 });
 
-export default connect(mapStateToProps, { logoutUser })(Navigation);
+export default connect(mapStateToProps, { logoutUser, clearCurrentProfile })(Navigation);

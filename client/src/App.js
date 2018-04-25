@@ -11,7 +11,7 @@ import Dashboard from "./components/dashboard";
 import Register from "./components/auth/register";
 import Login from "./components/auth/login";
 import setAuthToken from "./utils/setAuthToken";
-import {setCurrentUser, logoutUser} from "./store/selectors";
+import {setCurrentUser, logoutUser, clearCurrentProfile} from "./store/selectors";
 
 // Check for token
 if (localStorage.jwtToken) {
@@ -27,8 +27,8 @@ if (localStorage.jwtToken) {
     if (decoded.exp < currentTime) {
         // Logout user
         store.dispatch(logoutUser());
-        // TODO: Clear current Profile
-
+        // Clear current Profile
+        store.dispatch(clearCurrentProfile());
         // Redirect to login
         window.location.href = '/login';
     }

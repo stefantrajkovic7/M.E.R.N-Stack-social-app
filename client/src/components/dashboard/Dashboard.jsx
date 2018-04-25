@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-class Dashboard extends Component {
+export class Dashboard extends Component {
     componentDidMount() {
         this.props.getCurrentProfile();
     }
@@ -15,6 +15,6 @@ class Dashboard extends Component {
     }
 }
 
-Dashboard.propTypes = {
-
-};
+// Dashboard.propTypes = {
+//
+// };
