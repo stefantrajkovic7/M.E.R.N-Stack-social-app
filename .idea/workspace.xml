@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8458c1-d504-4dae-8a71-9a6b009c3668" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/package.json" afterPath="$PROJECT_DIR$/client/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/App.js" afterPath="$PROJECT_DIR$/client/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/auth/login/Login.jsx" afterPath="$PROJECT_DIR$/client/src/components/auth/login/Login.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/auth/login/index.js" afterPath="$PROJECT_DIR$/client/src/components/auth/login/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/auth/register/Register.jsx" afterPath="$PROJECT_DIR$/client/src/components/auth/register/Register.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/auth/register/index.js" afterPath="$PROJECT_DIR$/client/src/components/auth/register/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/store/reducers/auth.js" afterPath="$PROJECT_DIR$/client/src/store/reducers/auth.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/store/reducers/index.js" afterPath="$PROJECT_DIR$/client/src/store/reducers/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/stefa.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/stefa.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/layout/Navigation.jsx" afterPath="$PROJECT_DIR$/client/src/components/layout/Navigation.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,18 +22,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
               <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Login.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/auth/login/Login.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="93" column="10" lean-forward="false" selection-start-line="93" selection-start-column="10" selection-end-line="93" selection-end-column="10" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -72,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/store/selectors/auth.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
@@ -80,6 +59,28 @@
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Navigation.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/components/layout/Navigation.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="514">
+              <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/layout/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,18 +123,6 @@
             <state relative-caret-position="156">
               <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/auth/register/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="80" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -193,7 +182,6 @@
         <option value="$PROJECT_DIR$/client/src/views/auth/login/Login.jsx" />
         <option value="$PROJECT_DIR$/client/src/components/layout/Landing.jsx" />
         <option value="$PROJECT_DIR$/client/src/components/layout/Layout.jsx" />
-        <option value="$PROJECT_DIR$/client/src/components/layout/Navigation.jsx" />
         <option value="$PROJECT_DIR$/client/src/components/layout/Footer.jsx" />
         <option value="$PROJECT_DIR$/client/src/App.css" />
         <option value="$PROJECT_DIR$/client/package.json" />
@@ -217,6 +205,7 @@
         <option value="$PROJECT_DIR$/client/src/store/reducers/auth.js" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/store/selectors/auth.js" />
+        <option value="$PROJECT_DIR$/client/src/components/layout/Navigation.jsx" />
       </list>
     </option>
   </component>
@@ -304,6 +293,21 @@
               <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -373,12 +377,12 @@
       <workItem from="1524427383459" duration="18652000" />
       <workItem from="1524517349314" duration="17414000" />
       <workItem from="1524643864795" duration="26000" />
-      <workItem from="1524647036480" duration="4353000" />
+      <workItem from="1524647036480" duration="4674000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78889000" />
+    <option name="totallyTimeSpent" value="79210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-258" width="1936" height="1056" extended-state="6" />
@@ -531,16 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/layout/Navigation.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="65" lean-forward="true" selection-start-line="9" selection-start-column="65" selection-end-line="9" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/layout/Footer.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
@@ -620,13 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/layout/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -787,6 +774,24 @@
           <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/layout/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/layout/Navigation.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
