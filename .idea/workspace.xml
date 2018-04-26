@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8458c1-d504-4dae-8a71-9a6b009c3668" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/stefa.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/stefa.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/App.css" afterPath="$PROJECT_DIR$/client/src/App.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/create-portfolio/CreateProfile.jsx" afterPath="$PROJECT_DIR$/client/src/components/create-portfolio/CreateProfile.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/create-portfolio/index.js" afterPath="$PROJECT_DIR$/client/src/components/create-portfolio/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/shared/SelectListComponent.js" afterPath="$PROJECT_DIR$/client/src/components/shared/SelectListComponent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/shared/TextAreaComponent.js" afterPath="$PROJECT_DIR$/client/src/components/shared/TextAreaComponent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/shared/TextGroupComponent.js" afterPath="$PROJECT_DIR$/client/src/components/shared/TextGroupComponent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/store/selectors/profile.js" afterPath="$PROJECT_DIR$/client/src/store/selectors/profile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helpers/index.js" afterPath="$PROJECT_DIR$/helpers/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,14 +18,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CreateProfile.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateProfile.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/create-portfolio/CreateProfile.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="113" column="51" lean-forward="false" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+            <state relative-caret-position="312">
+              <caret line="60" column="46" lean-forward="false" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="46" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/src/App.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,18 +59,6 @@
               <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/store/selectors/profile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="22" column="32" lean-forward="true" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,7 +204,6 @@
         <option value="$PROJECT_DIR$/client/src/components/dashboard/Dashboard.jsx" />
         <option value="$PROJECT_DIR$/client/src/components/shared/PrivateRoute.js" />
         <option value="$PROJECT_DIR$/client/src/App.js" />
-        <option value="$PROJECT_DIR$/client/src/App.css" />
         <option value="$PROJECT_DIR$/client/src/components/create-portfolio/index.js" />
         <option value="$PROJECT_DIR$/client/src/components/shared/TextGroupComponent.js" />
         <option value="$PROJECT_DIR$/client/src/components/shared/TextAreaComponent.js" />
@@ -218,6 +211,7 @@
         <option value="$PROJECT_DIR$/client/src/store/selectors/profile.js" />
         <option value="$PROJECT_DIR$/helpers/index.js" />
         <option value="$PROJECT_DIR$/client/src/components/create-portfolio/CreateProfile.jsx" />
+        <option value="$PROJECT_DIR$/client/src/App.css" />
       </list>
     </option>
   </component>
@@ -295,19 +289,6 @@
             <path>
               <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
               <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="v1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="v1" type="462c0819:PsiDirectoryNode" />
-              <item name="profiles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -322,23 +303,6 @@
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
@@ -347,40 +311,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="create-portfolio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mern-stack-social" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mern-stack-social" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -437,12 +367,12 @@
       <workItem from="1524517349314" duration="17414000" />
       <workItem from="1524643864795" duration="26000" />
       <workItem from="1524647036480" duration="16902000" />
-      <workItem from="1524743916864" duration="7571000" />
+      <workItem from="1524743916864" duration="8688000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99009000" />
+    <option name="totallyTimeSpent" value="100126000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-258" width="1936" height="1056" extended-state="6" />
@@ -753,14 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/v1/profiles/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -893,11 +815,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/create-portfolio/CreateProfile.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="113" column="51" lean-forward="false" selection-start-line="113" selection-start-column="51" selection-end-line="113" selection-end-column="51" />
+        <state relative-caret-position="312">
+          <caret line="60" column="46" lean-forward="false" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="46" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="46" column="1" lean-forward="true" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

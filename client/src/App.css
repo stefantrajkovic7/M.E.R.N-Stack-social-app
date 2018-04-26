@@ -42,7 +42,13 @@ body {
     color: #bbb !important;
 }
 
+.padd {
+    padding-bottom: 90px;
+}
+
 .footer {
-    position: absolute;
+    position: fixed;
+    margin-top: 10px;
+    bottom: 0;
     width: 100%;
 }
