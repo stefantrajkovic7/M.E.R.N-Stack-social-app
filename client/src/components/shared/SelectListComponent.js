@@ -39,7 +39,7 @@ SelectList.propTypes = {
     name: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
     info: PropTypes.string,
-    error: PropTypes.string,
+    error: PropTypes.any,
     options: PropTypes.array.isRequired,
     onChange: PropTypes.func.isRequired,
 };

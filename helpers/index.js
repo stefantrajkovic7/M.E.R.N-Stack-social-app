@@ -134,7 +134,7 @@ exports.validateProfile = data => {
     });
 
     if (!Validator.isLength(data.handle, { min: 2, max: 40 })) {
-        errors.email = "Handle must be between 2 and 40 characters";
+        errors.handle = "Handle must be between 2 and 40 characters";
     }
 
     if (!isEmpty(data.website)) {

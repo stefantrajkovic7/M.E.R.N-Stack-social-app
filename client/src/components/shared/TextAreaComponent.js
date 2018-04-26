@@ -34,7 +34,7 @@ TextArea.propTypes = {
     placeholder: PropTypes.string,
     value: PropTypes.string.isRequired,
     info: PropTypes.string,
-    error: PropTypes.string,
+    error: PropTypes.any,
     onChange: PropTypes.func.isRequired,
 };
 

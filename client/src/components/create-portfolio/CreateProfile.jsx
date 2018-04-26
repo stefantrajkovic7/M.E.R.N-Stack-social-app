@@ -20,13 +20,29 @@ export class CreateProfile extends Component {
         }
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({ errors: nextProps.errors })
+        }
+    }
+
     onChange = e => this.setState({
         [e.target.name]: e.target.value
     });
 
     onSubmit = e => {
         e.preventDefault();
-        console.log('SUBMIT')
+        const profileData = {
+            handle: this.state.handle,
+            company: this.state.company,
+            website: this.state.website,
+            location: this.state.location,
+            status: this.state.status,
+            skills: this.state.skills,
+            githubusername: this.state.githubusername,
+            bio: this.state.bio
+        };
+        this.props.createProfile(profileData, this.props.history)
     };
 
     render() {
@@ -95,7 +111,7 @@ export class CreateProfile extends Component {
                                     value={this.state.skills}
                                     info="Please use comma separated values (eg. HTML, CSS, Javascript...)"
                                     error={errors.skills}
-                                    placeholder="Dev Skills"
+                                    placeholder="* Dev Skills"
                                     onChange={this.onChange}/>
 
                                 <TextFieldGroup
