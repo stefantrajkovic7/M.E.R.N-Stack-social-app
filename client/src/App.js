@@ -13,6 +13,7 @@ import Login from "./components/auth/login";
 import setAuthToken from "./utils/setAuthToken";
 import {setCurrentUser, logoutUser, clearCurrentProfile} from "./store/selectors";
 import PrivateRoute from "./components/shared/PrivateRoute";
+import CreateProfile from "./components/create-portfolio";
 
 // Check for token
 if (localStorage.jwtToken) {
@@ -48,6 +49,9 @@ class App extends Component {
                         <Route exact path="/login" component={Login}/>
                         <Switch>
                             <PrivateRoute exact path="/dashboard" component={Dashboard}/>
+                        </Switch>
+                        <Switch>
+                            <PrivateRoute exact path="/create-profile" component={CreateProfile}/>
                         </Switch>
                     </div>
                     <Footer />
