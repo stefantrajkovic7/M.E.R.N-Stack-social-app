@@ -20,6 +20,14 @@ class Navigation extends Component {
         const authLinks = (
             <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
+                    <Link to="/dashboard" className="nav-link">
+                        <i className="fa fa-address-card">
+
+                        </i>
+                        Dashboard
+                    </Link>
+                </li>
+                <li className="nav-item">
                     <a
                         href=""
                         onClick={this.onLogoutClick.bind(this)}
