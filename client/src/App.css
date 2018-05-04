@@ -46,6 +46,16 @@ body {
     padding-bottom: 90px;
 }
 
+.sub, input[type=checkbox], input[type=radio] {
+    zoom: 1.7 !important;
+}
+
+.form-check-label {
+    margin-left: 12px;
+    position: relative;
+    top: 3px;
+}
+
 .footer {
     position: fixed;
     margin-top: 10px;
