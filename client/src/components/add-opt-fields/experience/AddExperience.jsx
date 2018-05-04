@@ -32,7 +32,18 @@ export class AddExperience extends Component {
 
     onSubmit = e => {
         e.preventDefault();
-        console.log('Submit')
+
+        const data = {
+            company: this.state.company,
+            title: this.state.title,
+            location: this.state.location,
+            from: this.state.from,
+            to: this.state.to,
+            current: this.state.current,
+            description: this.state.description
+        };
+
+        this.props.addExperience(data, this.props.history)
     };
 
     onCheck = e => this.setState({
@@ -121,5 +132,6 @@ export class AddExperience extends Component {
 
 AddExperience.propTypes = {
     profile: PropTypes.object.isRequired,
+    addExperience: PropTypes.func.isRequired,
     errors: PropTypes.object.isRequired
 };
