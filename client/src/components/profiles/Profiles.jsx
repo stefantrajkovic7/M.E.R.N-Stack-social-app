@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Spinner from '../shared/Spinner';
 import Item from "./Item";
 
-export class Profile extends Component {
+export class Profiles extends Component {
 
     componentDidMount() {
         this.props.getProfiles();
@@ -43,7 +43,7 @@ export class Profile extends Component {
     }
 }
 
-Profile.propTypes = {
+Profiles.propTypes = {
     getProfiles: PropTypes.func.isRequired,
     profile: PropTypes.object.isRequired
 };
