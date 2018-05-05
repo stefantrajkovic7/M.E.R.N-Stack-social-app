@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {PROFILE_LOADING, GET_PROFILE, CLEAR_CURRENT_PROFILE, GET_ERRORS, SET_CURRENT_USER} from "../actions";
+import {PROFILE_LOADING, GET_PROFILE, GET_PROFILES, CLEAR_CURRENT_PROFILE, GET_ERRORS, SET_CURRENT_USER} from "../actions";
 import {api} from "../../environment/dev";
 
 export const getCurrentProfile = () => dispatch => {
@@ -85,6 +85,20 @@ export const deleteAccount = () => dispatch => {
                 payload: err.response.data
             }));
     }
+};
+
+export const getProfiles = () => dispatch => {
+    dispatch(setProfileLoading());
+    axios
+        .get(`${api}/profiles/list`)
+        .then(res => dispatch({
+            type: GET_PROFILES,
+            payload: res.data
+        }))
+        .catch(err => dispatch({
+            type: GET_PROFILES,
+            payload: null
+        }));
 };
 
 const setProfileLoading = () => {
