@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import { Posts } from './Posts';
-// import { addPost } from "../../store/selectors";
+import { getPosts } from "../../store/selectors";
 
 const mapStateToProps = state => ({
-    // profile: state.profile
+    post: state.post
 });
 
-export default connect(mapStateToProps, { })(Posts);
+export default connect(mapStateToProps, { getPosts })(Posts);
