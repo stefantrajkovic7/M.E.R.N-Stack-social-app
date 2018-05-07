@@ -4,7 +4,8 @@ import { AddPost } from './AddPost';
 import { addPost } from "../../../store/selectors";
 
 const mapStateToProps = state => ({
-    profile: state.profile
+    auth: state.auth,
+    errors: state.errors
 });
 
 export default connect(mapStateToProps, { addPost })(AddPost);
