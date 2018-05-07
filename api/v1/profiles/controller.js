@@ -59,7 +59,7 @@ exports.create = (req, res) => {
         "location",
         "bio",
         "status",
-        "githubprofile",
+        "githubusername",
         "youtube",
         "twitter",
         "facebook",

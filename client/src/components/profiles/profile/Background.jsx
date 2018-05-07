@@ -81,7 +81,7 @@ class Background extends Component {
 }
 
 Background.propTypes = {
-    profile: PropTypes.object.isRequired
+    profile: PropTypes.object
 };
 
 export default Background;
