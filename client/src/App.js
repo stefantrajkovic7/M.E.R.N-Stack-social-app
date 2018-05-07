@@ -19,7 +19,7 @@ import AddExperience from "./components/add-opt-fields/experience";
 import AddEducation from "./components/add-opt-fields/education";
 import Profiles from "./components/profiles";
 import Profile from "./components/profiles/profile";
-import NotFound from "./components/not-found/NotFound";
+// import NotFound from "./components/not-found/NotFound";
 import Posts from "./components/posts";
 
 // Check for token
@@ -57,7 +57,6 @@ class App extends Component {
                             <Route exact path="/login" component={Login}/>
                             <Route exact path="/profiles" component={Profiles}/>
                             <Route exact path="/profile/:handle" component={Profile}/>
-                            <Route exact path="/not-found" component={NotFound}/>
                         </Switch>
                         <Switch>
                             <PrivateRoute exact path="/dashboard" component={Dashboard}/>

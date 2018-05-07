@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8458c1-d504-4dae-8a71-9a6b009c3668" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/stefa.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/stefa.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/App.js" afterPath="$PROJECT_DIR$/client/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/layout/Navigation.jsx" afterPath="$PROJECT_DIR$/client/src/components/layout/Navigation.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/profiles/profile/Github.jsx" afterPath="$PROJECT_DIR$/client/src/components/profiles/profile/Github.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/profiles/profile/Profile.jsx" afterPath="$PROJECT_DIR$/client/src/components/profiles/profile/Profile.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/index.css" afterPath="$PROJECT_DIR$/client/src/index.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,14 +16,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="56" column="74" lean-forward="true" selection-start-line="56" selection-start-column="74" selection-end-line="56" selection-end-column="74" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="332">
+              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,7 +76,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Github.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Github.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/profiles/profile/Github.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
@@ -206,9 +198,9 @@
         <option value="$PROJECT_DIR$/client/src/components/posts/Posts.jsx" />
         <option value="$PROJECT_DIR$/client/src/components/layout/Navigation.jsx" />
         <option value="$PROJECT_DIR$/client/src/index.css" />
-        <option value="$PROJECT_DIR$/client/src/App.js" />
         <option value="$PROJECT_DIR$/client/src/components/profiles/profile/Profile.jsx" />
         <option value="$PROJECT_DIR$/client/src/components/profiles/profile/Github.jsx" />
+        <option value="$PROJECT_DIR$/client/src/App.js" />
       </list>
     </option>
   </component>
@@ -420,12 +412,12 @@
       <workItem from="1525296469881" duration="3134000" />
       <workItem from="1525341465468" duration="11960000" />
       <workItem from="1525435942293" duration="8899000" />
-      <workItem from="1525560900171" duration="14392000" />
+      <workItem from="1525560900171" duration="14599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141169000" />
+    <option name="totallyTimeSpent" value="141376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-258" width="1936" height="1056" extended-state="6" />
@@ -864,16 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="56" column="74" lean-forward="true" selection-start-line="56" selection-start-column="74" selection-end-line="56" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/profiles/Profiles.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -904,6 +886,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding />
         </state>
       </provider>
