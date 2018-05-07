@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8458c1-d504-4dae-8a71-9a6b009c3668" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/stefa.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/stefa.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/posts/Posts.jsx" afterPath="$PROJECT_DIR$/client/src/components/posts/Posts.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/posts/index.js" afterPath="$PROJECT_DIR$/client/src/components/posts/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/store/reducers/post.js" afterPath="$PROJECT_DIR$/client/src/store/reducers/post.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/components/posts/post/PostItem.jsx" afterPath="$PROJECT_DIR$/client/src/components/posts/post/PostItem.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/store/selectors/post.js" afterPath="$PROJECT_DIR$/client/src/store/selectors/post.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Post.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Post.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/posts/post/Post.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            <state relative-caret-position="260">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -32,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostItem.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PostItem.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/components/posts/post/PostItem.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+            <state relative-caret-position="340">
+              <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -91,8 +88,8 @@
       <file leaf-file-name="post.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/store/selectors/post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            <state relative-caret-position="832">
+              <caret line="59" column="2" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -206,11 +203,11 @@
         <option value="$PROJECT_DIR$/client/src/components/posts/post/index.js" />
         <option value="$PROJECT_DIR$/client/src/components/posts/index.js" />
         <option value="$PROJECT_DIR$/client/src/components/posts/post/aleksa.js" />
-        <option value="$PROJECT_DIR$/client/src/store/selectors/post.js" />
         <option value="$PROJECT_DIR$/client/src/store/reducers/post.js" />
-        <option value="$PROJECT_DIR$/client/src/components/posts/post/PostItem.jsx" />
         <option value="$PROJECT_DIR$/client/src/components/posts/Posts.jsx" />
         <option value="$PROJECT_DIR$/client/src/components/posts/post/Post.jsx" />
+        <option value="$PROJECT_DIR$/client/src/store/selectors/post.js" />
+        <option value="$PROJECT_DIR$/client/src/components/posts/post/PostItem.jsx" />
       </list>
     </option>
   </component>
@@ -424,12 +421,12 @@
       <workItem from="1525296469881" duration="3134000" />
       <workItem from="1525341465468" duration="11960000" />
       <workItem from="1525435942293" duration="8899000" />
-      <workItem from="1525560900171" duration="23414000" />
+      <workItem from="1525560900171" duration="24441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150191000" />
+    <option name="totallyTimeSpent" value="151218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-258" width="1936" height="1056" extended-state="6" />
@@ -844,16 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/store/selectors/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/dashboard/ProfileActions.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -890,20 +877,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/posts/post/PostItem.jsx">
+    <entry file="file://$PROJECT_DIR$/client/src/components/posts/post/Post.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+        <state relative-caret-position="260">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/posts/post/Post.jsx">
+    <entry file="file://$PROJECT_DIR$/client/src/store/selectors/post.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="832">
+          <caret line="59" column="2" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/posts/post/PostItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
