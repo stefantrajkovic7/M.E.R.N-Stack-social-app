@@ -28,6 +28,14 @@ class Navigation extends Component {
                     </Link>
                 </li>
                 <li className="nav-item">
+                    <Link to="/feed" className="nav-link">
+                        <i className="fa fa-sticky-note">
+
+                        </i>
+                        Post Feed
+                    </Link>
+                </li>
+                <li className="nav-item">
                     <a
                         href=""
                         onClick={this.onLogoutClick.bind(this)}

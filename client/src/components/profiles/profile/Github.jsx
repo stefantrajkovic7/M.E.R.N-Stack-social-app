@@ -29,6 +29,10 @@ class Github extends Component {
             .catch(err => console.log(err));
     }
 
+    componentWillUnmount() {
+        this.setState({repos: null})
+    }
+
     render() {
         const { repos } = this.state;
         const items = repos.map(repo => (

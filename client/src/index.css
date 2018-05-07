@@ -8,7 +8,7 @@ body {
     font-weight: 700;
 }
 
-.fa-address-card {
+.fa-address-card, .fa-sticky-note {
     color: white !important;
     margin-right: 10px;
     top: 2px;
