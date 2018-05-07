@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Spinner from '../shared/Spinner';
 import { getPost } from "../../store/selectors";
 import PostItem from "./post/PostItem";
+import AddComment from "./comments";
 
 class SingleView extends Component {
     componentDidMount() {
@@ -21,6 +22,7 @@ class SingleView extends Component {
             postUI = (
                 <div>
                     <PostItem post={post} showActions={false}/>
+                    <AddComment postId={post._id}/>
                 </div>
             )
         }
