@@ -5,11 +5,13 @@ import {
     DELETE_POST,
     GET_POSTS,
     GET_POST,
-    POST_LOADING
+    POST_LOADING,
+    CLEAR_ERRORS
 } from "../actions";
 import {api} from "../../environment/dev";
 
 export const addPost = newPost => dispatch => {
+    dispatch(clearErrors());
     axios
         .post(`${api}/posts/create`, newPost)
         .then(res => dispatch({
@@ -24,6 +26,7 @@ export const addPost = newPost => dispatch => {
 
 export const getPosts = () => dispatch => {
     dispatch(setPostLoading());
+    dispatch(clearErrors());
     axios
         .get(`${api}/posts`)
         .then(res => dispatch({
@@ -84,8 +87,22 @@ export const removeLike = id => dispatch => {
 };
 
 export const addComment = (postId, commentData) => dispatch => {
+    dispatch(clearErrors());
     axios
         .post(`${api}/posts/comment/${postId}`, commentData)
+        .then(res => dispatch({
+            type: GET_POST,
+            payload: res.data
+        }))
+        .catch(err => dispatch({
+            type: GET_ERRORS,
+            payload: err.response.data
+        }));
+};
+
+export const deleteComment = (postId, commentId) => dispatch => {
+    axios
+        .delete(`${api}/posts/comment/${postId}/${commentId}`)
         .then(res => dispatch({
             type: GET_POST,
             payload: res.data
@@ -99,5 +116,11 @@ export const addComment = (postId, commentData) => dispatch => {
 const setPostLoading = () => {
     return {
         type: POST_LOADING
+    }
+};
+
+export const clearErrors = () => {
+    return {
+        type: CLEAR_ERRORS
     }
 };
