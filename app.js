@@ -34,7 +34,7 @@ const prodOptions = {
 };
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(cors(prodOptions));
+    app.use(cors({origin: '*'}))
     
 } else {
     app.use(cors(options));
