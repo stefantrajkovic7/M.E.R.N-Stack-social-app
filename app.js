@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 
 // CORS
 const options = {
-    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization", "X-Access-Token", "application/x-www-form-urlencoded", "charset=UTF-8", "application/json", "text/plain", "Access-Control-Allow-Headers"],
+    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization", "X-Access-Token", "application/x-www-form-urlencoded", "charset=UTF-8", "application/javascript", "application/json", "text/plain", "Access-Control-Allow-Headers"],
     credentials: true,
     methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
     origin: UI_API_URL,
@@ -27,14 +27,15 @@ const options = {
 };
 
 const prodOptions = {
-    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization", "X-Access-Token", "application/x-www-form-urlencoded", "charset=UTF-8", "application/json", "text/plain", "Access-Control-Allow-Headers"],
+    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization", "X-Access-Token", "application/x-www-form-urlencoded", "charset=UTF-8", "application/javascript", "application/json", "text/plain", "Access-Control-Allow-Headers"],
     credentials: true,
     methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-    origin: UI_PROD_API_URL
+    origin: UI_PROD_API_URL,
+    preflightContinue: true
 };
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(cors({origin: '*'}))
+    app.use(cors(prodOptions))
     
 } else {
     app.use(cors(options));
