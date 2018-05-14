@@ -1,4 +1,4 @@
-export const api = 'https://localhost:5000/api/v1';
+export const api = '/api/v1';
 
 // Github Credentials
 export const github = {
