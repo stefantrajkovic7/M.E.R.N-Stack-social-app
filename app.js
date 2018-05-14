@@ -9,7 +9,8 @@ const path  = require('path');
 
 const app = express();
 
-const UI_API_URL = 'http://localhost:3000' || 'https://whispering-everglades-78509.herokuapp.com';
+const UI_API_URL = 'http://localhost:3000';
+const UI_PROD_API_URL = 'https://whispering-everglades-78509.herokuapp.com';
 
 // Express Configuration
 app.use(morgan('dev'));
@@ -25,7 +26,21 @@ const options = {
     preflightContinue: false
 };
 
-app.use(cors(options));
+const prodOptions = {
+    allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization", "X-Access-Token", "application/x-www-form-urlencoded", "charset=UTF-8", "application/json", "text/plain", "Access-Control-Allow-Headers"],
+    credentials: true,
+    methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
+    origin: UI_PROD_API_URL,
+    preflightContinue: false
+};
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(cors(prodOptions));
+} else {
+    app.use(cors(options));
+}
+
+
 
 // Middlewares/Services
 app.use(passport.initialize());
