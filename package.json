@@ -4,6 +4,8 @@
   "description": "MERN STACK",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "client-install": "npm install --prefix client",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \" npm run server\" \"npm run client\"",
