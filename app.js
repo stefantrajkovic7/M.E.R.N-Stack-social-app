@@ -30,8 +30,7 @@ const prodOptions = {
     allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization", "X-Access-Token", "application/x-www-form-urlencoded", "charset=UTF-8", "application/json", "text/plain", "Access-Control-Allow-Headers"],
     credentials: true,
     methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-    origin: UI_PROD_API_URL,
-    preflightContinue: false
+    origin: UI_PROD_API_URL
 };
 
 if (process.env.NODE_ENV === 'production') {
