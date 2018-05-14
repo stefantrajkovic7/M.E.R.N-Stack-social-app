@@ -27,9 +27,11 @@ export class Register extends Component {
         }
     }
 
-    onChange = e => this.setState({
-        [e.target.name]: e.target.value
-    });
+    onChange = function(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    } 
 
     onSubmit = e => {
         e.preventDefault();
