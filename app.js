@@ -9,7 +9,7 @@ const path  = require('path');
 
 const app = express();
 
-const UI_API_URL = 'http://localhost:3000';
+const UI_API_URL = 'http://localhost:3000' || 'https://whispering-everglades-78509.herokuapp.com';
 
 // Express Configuration
 app.use(morgan('dev'));
