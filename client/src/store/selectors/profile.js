@@ -1,12 +1,5 @@
 import axios from 'axios';
-import {
-    PROFILE_LOADING,
-    GET_PROFILE,
-    GET_PROFILES,
-    CLEAR_CURRENT_PROFILE,
-    GET_ERRORS,
-    SET_CURRENT_USER
-} from "../actions";
+import {PROFILE_LOADING, GET_PROFILE, GET_PROFILES, CLEAR_CURRENT_PROFILE, GET_ERRORS, SET_CURRENT_USER} from "../actions";
 import {api} from "../../environment/dev";
 
 export const getCurrentProfile = () => dispatch => {

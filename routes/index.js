@@ -1,4 +1,5 @@
 module.exports = app => {
+    app.get('/', (req, res) => res.send('Hello World!'));
 
     /**
      * @UserApiRoutes
@@ -14,5 +15,5 @@ module.exports = app => {
      * @PostApiRoutes
      */
     app.use('/api/v1/posts', require('../api/v1/posts'));
-    
+
 };

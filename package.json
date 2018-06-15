@@ -4,13 +4,9 @@
   "description": "MERN STACK",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "client-install": "npm install --prefix client",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \" npm run server\" \"npm run client\"",
-    "heroku-postbuild": 
-      "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "dev": "concurrently \" npm run server\" \"npm run client\""
   },
   "keywords": [
     "react/redux, node, mern"
