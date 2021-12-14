@@ -2,6 +2,7 @@
   "name": "mern-stack-social",
   "version": "1.0.0",
   "description": "MERN STACK",
+  "proxy": "http://localhost:3000",
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",

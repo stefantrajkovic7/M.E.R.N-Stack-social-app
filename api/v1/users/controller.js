@@ -20,7 +20,9 @@ const helper = require('../../../helpers');
  * @apiError (500) {String} Internal Server error
  */
 exports.create = (req, res) => {
+    console.log('WAAAAAAA')
     const { errors, isValid } = helper.validateRegistration(req.body);
+    console.log(errors, 'ERRORSSSSA')
 
     if (!isValid) {
         return res.status(400).json(errors)
